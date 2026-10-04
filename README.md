@@ -1,57 +1,34 @@
 # Earth in Change
 
-**Sensor / image / acquisition time**
+**Remote sensing · image time series · surface observation**
 
-Earth in Change is an observation instrument for examining how remotely sensed views of Earth depend on product, date, and place. It uses NASA EOSDIS GIBS imagery to make temporal comparison explicit without treating every rendered image as a direct photograph of a single instant.
+Earth in Change is an Earth-observation instrument for comparing date-scoped satellite products across geographic space. It treats each raster as an observation product with defined temporal support, spatial resolution, spectral or retrieval semantics, and acquisition context.
 
-> **GeoGeek principle:** Pixels have provenance.
+![Earth in Change instrument](https://geogeeklab.github.io/earth-in-change/assets/instrument.png)
 
-## Why this project exists
+## Observation framework
 
-Earth-observation images are easy to read as pictures and harder to read as measurements. A rendered scene carries the history of a sensor, an acquisition strategy, a processing chain, a product definition, and a time window.
+The instrument is designed for temporal interpretation of remotely sensed imagery rather than simple image browsing. A selected UTC date drives NASA EOSDIS GIBS requests, while viewport navigation and product metadata preserve the connection among sensor, product, acquisition time, map extent, and rendered pixel values.
 
-This project keeps those conditions visible. The goal is not simply to move through a map. The goal is to compare Earth while preserving the meaning of the data being compared.
+Temporal comparison makes change visible while keeping product semantics explicit. Depending on the selected layer, the raster may represent true-color imagery, false-color composites, land-surface temperature, precipitation, snow cover, or another geophysical product exposed through GIBS.
 
-## Measurement concept
+## Measurement context
 
-The instrument requests date-scoped raster products from NASA EOSDIS GIBS and places them in a navigable geographic viewport. Product semantics remain part of the observation: cadence, resolution, color meaning, availability, and interpretation limits can differ from one layer to another.
-
-| Condition | Meaning in the instrument |
+| Dimension | Interpretation |
 | --- | --- |
-| Provider | NASA EOSDIS GIBS |
+| Data provider | NASA EOSDIS Global Imagery Browse Services (GIBS) |
 | Delivery | Date-scoped WMS raster requests |
 | Geographic reference | EPSG:4326 viewport requests |
-| Time control | User-selected UTC view date |
-| Comparison | Product- and date-aware visual comparison |
+| Time | User-selected UTC observation date |
+| Spatial support | Product-specific pixel size and map extent |
+| Observation semantics | Product-specific spectral, retrieval, compositing, and color conventions |
 
-## Reading the view
+Each rendered layer should be interpreted through its product definition. Acquisition timing, cloud and atmospheric conditions, compositing strategy, retrieval algorithm, resampling, and spatial resolution all contribute to the information content of the image.
 
-A selected date does not necessarily represent one instantaneous exposure. Cloud, atmosphere, orbital overpass timing, retrieval algorithms, compositing, resampling, and provider availability can all affect what appears on screen.
+## Instrument access
 
-Use the instrument to ask questions such as:
+**Live instrument:** https://geogeeklab.github.io/earth-in-change/
 
-- Is an apparent change likely to be geophysical, atmospheric, seasonal, or product-related?
-- What does changing the date actually change in the source request?
-- Do two layers represent the same physical quantity in the same way?
-- What remains unknown when an image looks visually persuasive?
+This repository provides the public entrypoint. The production Earth-observation runtime remains in `GeoGeekLab/GeoGeekLab.github.io`; `SOURCE.json` records the pinned source revision and `PRODUCTION.md` defines the data and runtime contract.
 
-## Operations
-
-**Public instrument**  
-https://geogeeklab.github.io/earth-in-change/
-
-The entry repository mounts the production Earth-observation runtime from `GeoGeekLab/GeoGeekLab.github.io`, pinned to commit `d949bd75870bfd49f6d12b297e6cca02de107f9c`. The runtime and its product contract change only when that production baseline is intentionally advanced.
-
-See [`PRODUCTION.md`](./PRODUCTION.md) for the data contract and interpretation limits.
-
-For local inspection of the entry shell:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`. Network access is required for the pinned runtime and NASA GIBS requests.
-
----
-
-Part of the **GeoGeek Observatory** — observing change without hiding the conditions of observation.
+*GeoGeek note — pixels have provenance.*
