@@ -10,6 +10,17 @@
   </a>
 </p>
 
+## Instrument capabilities
+
+*EARTH IN CHANGE* provides a product-aware interface for examining how Earth-observation signals vary across location, acquisition date, and measurement product.
+
+- **Select an observation product.** Switch among imagery and geophysical layers exposed through NASA GIBS, including corrected reflectance, false-color composites, temperature, precipitation, and cryosphere-related products.
+- **Set the observation date.** Request a specific UTC date and evaluate the corresponding date-scoped raster while preserving the product definition and acquisition context.
+- **Navigate geographic extent.** Pan and zoom the observation view while maintaining the relationship among map extent, coordinate reference, spatial resolution, and rendered raster values.
+- **Compare observations through time.** Place two dates in direct comparison to identify spatial change while holding the selected product and geographic context constant.
+- **Inspect product context.** Keep sensor/product identity, date, map extent, and rendering semantics visible as part of the interpretation rather than as hidden metadata.
+- **Reproduce a view.** Preserve the principal observation state so that a selected product, date, and geographic view can be revisited as the same analytical configuration.
+
 ## Observation framework
 
 The instrument is designed for multi-temporal interpretation of remotely sensed imagery. A selected UTC date drives requests to [NASA EOSDIS Global Imagery Browse Services (GIBS)](https://www.earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/gibs), while viewport navigation preserves the relationship among acquisition time, geographic extent, product definition, and rendered pixel values.
