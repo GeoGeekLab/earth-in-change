@@ -4,7 +4,11 @@
 
 *EARTH IN CHANGE* is an Earth-observation instrument for comparing date-scoped satellite products across geographic space. It treats every raster as a geospatial observation product with an explicit sensor/product lineage, temporal support, spatial resolution, spectral or retrieval semantics, map extent, and rendering convention.
 
-[![Earth in Change instrument](https://geogeeklab.github.io/earth-in-change/assets/instrument.png)](https://geogeeklab.github.io/earth-in-change/)
+<p align="center">
+  <a href="https://geogeeklab.github.io/earth-in-change/">
+    <img src="https://geogeeklab.github.io/earth-in-change/assets/instrument.png" alt="Earth in Change instrument" width="720">
+  </a>
+</p>
 
 ## Observation framework
 
