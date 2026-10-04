@@ -1,25 +1,22 @@
 # Production contract
 
-## Runtime baseline
+`earth-in-change` is the public entrypoint for the production *EARTH IN CHANGE* instrument.
 
-This repository mounts the Earth in Change production observation runtime from `GeoGeekLab/GeoGeekLab.github.io` pinned to commit `d949bd75870bfd49f6d12b297e6cca02de107f9c`.
+## Runtime
 
-It loads the unified GeoGeek data-supply runtime and the Earth observation v3 module. Production CSS is pinned to the same source commit.
+- Source repository: `GeoGeekLab/GeoGeekLab.github.io`
+- Tested source revision: `064ce2c718499fc26a744a9e58cad09d97a323fb`
+- Production channel: `https://geogeeklab.github.io/`
+- Shared bootstrap: `/core/observatory-entry.js`
+- Earth observation runtime: `/earth-observation-lab-v3.js`
+- Provider control: `/core/provider-stability.js` + `/core/data-supply.js`
 
-## Data contract
+The entrypoint and main Lab use the same runtime modules, product registry, observation semantics, and release channel.
 
-- Provider: NASA EOSDIS GIBS.
-- Delivery: date-scoped WMS raster requests.
-- Projection: EPSG:4326 viewport requests.
-- Time: the user-selected UTC view date controls the requested product date.
-- Products carry product-specific availability windows, cadence, resolution, color semantics, and interpretation limits.
+## Data supply
 
-## Interpretation limits
+NASA EOSDIS GIBS provides date-scoped Earth-observation raster products through standards-based web-map services. Product identity, UTC view date, viewport extent, coordinate reference, rendering state, and product metadata remain part of the runtime state.
 
-A selected date is not one instantaneous photograph. Cloud, atmosphere, overpass time, retrieval algorithms, compositing, resampling, and provider availability condition the rendered view.
+## Release checks
 
-## Deployment contract
-
-`main` deploys through GitHub Pages Actions. Static contract checks run before the Pages artifact is uploaded.
-
-The source runtime is version-pinned. A production runtime upgrade requires an explicit pinned-SHA change in `index.html`.
+The repository validates the source revision, shared bootstrap reference, Chromium instrument mount, absence of `.instrument-error`, provider/Data Supply installation, instrument screenshot, Pages deployment, and the deployed public endpoint.
