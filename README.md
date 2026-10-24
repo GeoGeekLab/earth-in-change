@@ -6,9 +6,10 @@
 
 <p align="center">
   <a href="https://geogeeklab.github.io/earth-in-change/">
-    <img src="https://geogeeklab.github.io/earth-in-change/assets/instrument.png" alt="Earth in Change instrument" width="720">
+    <img src="https://github.com/user-attachments/assets/12988e42-c034-4efd-8a6f-43f750625479" alt="Earth in Change instrument" width="720">
   </a>
 </p>
+
 
 ## Instrument capabilities
 
@@ -57,3 +58,5 @@ Pinned revision: [`SOURCE.json`](./SOURCE.json)
 Production contract: [`PRODUCTION.md`](./PRODUCTION.md)
 
 *GeoGeek note — pixels have provenance, scale, support, and time.*
+
+**“高岸为谷，深谷为陵。” ——《诗经·小雅·十月之交》**
