@@ -1,5 +1,11 @@
 # Earth in Change
 
+<!-- GeoGeekLab VIS: BEGIN -->
+<p align="center">
+  <a href="https://github.com/GeoGeekLab/geogeeklab-visual-identity/tree/main/logos/earth-in-change"><img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/earth-in-change/readme-hero.svg" alt="Earth in Change — Earth-observation time-slice visual identity" width="720"></a>
+</p>
+<!-- GeoGeekLab VIS: END -->
+
 **Remote sensing · multi-temporal imagery · geophysical products · observation semantics**
 
 *EARTH IN CHANGE* is an Earth-observation instrument for comparing date-scoped satellite products across geographic space. Each layer carries a defined sensor/product lineage, temporal support, spatial resolution, spectral or retrieval semantics, map extent, and rendering convention.
