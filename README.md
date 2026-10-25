@@ -2,7 +2,7 @@
 
 <!-- GeoGeekLab VIS: BEGIN -->
 <p align="center">
-  <a href="https://github.com/GeoGeekLab/geogeeklab-visual-identity/tree/main/logos/earth-in-change"><img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/earth-in-change/readme-hero.svg" alt="Earth in Change — Earth-observation time-slice visual identity" width="720"></a>
+  <img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/readme-artwork/v3/earth-in-change/readme-artwork.webp" alt="Earth observation across two time slices" width="390">
 </p>
 <!-- GeoGeekLab VIS: END -->
 
